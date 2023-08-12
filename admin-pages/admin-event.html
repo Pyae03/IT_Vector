@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link
+			rel="stylesheet"
+			href="admin-event.style.css" />
+		<link
+			rel="stylesheet"
+			href="admin-nav-bar.style.css" />
+
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<nav>
+			<div class="logo">
+				<img
+					src="image/logo.svg"
+					alt="" />
+				<h2>IT_Vector</h2>
+			</div>
+
+			<div class="view-options">
+				<a href="#">DashBoard</a>
+				<a
+					href="#"
+					class=""
+					>Achievements</a
+				>
+				<a href="#">Event</a>
+				<a
+					href="#"
+					class="active"
+					>Database</a
+				>
+			</div>
+
+			<div class="user-tool">
+				<div class="search-bar">
+					<input
+						type="search"
+						name="search" />
+					<input
+						type="submit"
+						value="search" />
+				</div>
+				<div class="setting">
+					<img
+						src="image/notification.svg"
+						alt="" />
+				</div>
+				<div class="user-profile">
+					<img
+						src="image/user-default.svg"
+						alt="" />
+				</div>
+			</div>
+		</nav>
+
+		<!-- create event form -->
+		<div class="event-form">
+			<div class="view-title">
+				<img
+					src="image/Event.svg"
+					alt="" />
+				<h2>Event</h2>
+			</div>
+
+			<div class="btn-group">
+				<button class="btn-create">Create</button>
+				<button class="btn-cancel">Cancel</button>
+			</div>
+		</div>
+
+		<div class="event-list">
+			<div class="event-card">
+				<h3>Event Title: How to be a Computer Scientist</h3>
+				<p>Date: 18-8-2023</p>
+				<p>Type: Computer Science</p>
+				<button
+					id="expand"
+					class="">
+					Expand
+				</button>
+				<article class="event-description hidden">
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+						quisquam officiis fugit in quasi, aliquam ipsa illum velit inventore
+						sint praesentium obcaecati consequatur id illo dolore excepturi
+						similique facilis cupiditate? Mollitia reiciendis voluptas
+						laudantium porro sit dignissimos ullam ad quos numquam, placeat
+						labore adipisci, culpa officiis, impedit possimus ex praesentium
+						voluptate quidem. Ex totam corrupti numquam quis rerum quasi
+						sapiente! At accusantium, tempore, ullam magni culpa voluptatibus
+						illum excepturi odio quasi fugiat porro consectetur quaerat quisquam
+						minima assumenda quidem, nihil saepe architecto minus sapiente
+						suscipit. Officia vero at neque delectus? Quaerat facilis at tenetur
+						voluptatem necessitatibus error, expedita nulla esse modi excepturi
+						dolor quidem dignissimos ut doloremque? Quibusdam nisi saepe nihil
+						voluptatibus, eos ad, sapiente necessitatibus earum alias
+						dignissimos labore. Doloribus neque doloremque corporis suscipit
+						nihil amet accusamus fuga impedit? Dolores, totam! Hic reprehenderit
+						unde consequuntur dolorum natus cum. Voluptatum doloremque debitis
+						nostrum error maiores aperiam illum placeat exercitationem labore.
+					</p>
+				</article>
+			</div>
+		</div>
+		<!-- add form creation features with js -->
+		<script>
+			const expand = document.getElementById("expand");
+			const event_description = document.querySelector(".event-description");
+			expand.addEventListener("click", () => {
+				event_description.classList.toggle("hidden");
+			});
+		</script>
+	</body>
+</html>

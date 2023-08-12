@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Nunito:wght@200;300;400&display=swap");
+
+:root {
+	--bg-color: #eff3f9;
+	--white-color: #fff;
+	--light-purple: #9db7fb;
+	--light-blue: #60b9ff;
+	--dark-blue: #283747;
+	--light-gray: #eaecee;
+	--btn-border-radius: 0.5em;
+	--light-gray2: #d5d8dc;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+img,
+picture,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Nunito", "Lato";
+	color: #283747;
+}
+
+body {
+	min-height: 100vh;
+}
+
+@media (min-width: 1440px) {
+	.event-form {
+		/* display: flex;
+		flex-direction: column; */
+
+		border-radius: var(--btn-border-radius);
+		margin: 2em 7em;
+		padding: 2em;
+		background-color: var(--white-color);
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+			rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+	}
+	.btn-group {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		gap: 1em;
+	}
+	.btn-create,
+	.btn-cancel {
+		width: 100%;
+		height: 2.5em;
+		font-weight: bold;
+		font-size: 120%;
+
+		color: var(--bg-color);
+		background-color: var(--light-blue);
+		border: none;
+		border-radius: var(--btn-border-radius);
+	}
+
+	.event-card {
+		border-radius: var(--btn-border-radius);
+		margin: 2em 7em;
+		padding: 2em;
+		background-color: var(--white-color);
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+			rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+		transition: 0.3s ease;
+	}
+	/* add expand animation here */
+	article p {
+		color: var(--light-blue);
+		transition: 0.5s ease;
+	}
+	.hidden {
+		transition: 0.3s ease;
+		display: none;
+	}
+}
