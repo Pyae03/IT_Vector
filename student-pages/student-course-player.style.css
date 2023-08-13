@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Nunito:wght@200;300;400&display=swap");
+
+:root {
+	--bg-color: #eff3f9;
+	--white-color: #fff;
+	--light-purple: #9db7fb;
+	--light-blue: #60b9ff;
+	--dark-blue: #283747;
+	--light-gray: #eaecee;
+	--btn-border-radius: 0.5em;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+img,
+picture,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Nunito", "Lato";
+	color: #283747;
+}
+
+body {
+	min-height: 100vh;
+}
+
+@media (min-width: 1440px) {
+	img {
+		width: 30px;
+		height: 30px;
+	}
+	.container {
+		display: grid;
+		grid-template-columns: 1fr 0.35fr;
+		gap: 1em;
+		padding: 1em;
+		background-color: var(--bg-color);
+		height: 100svh;
+	}
+
+	.video-and-content {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+
+	.content {
+		padding: 1em;
+		border-radius: var(--btn-border-radius);
+		background-color: var(--white-color);
+		box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+			rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+	}
+
+	.view-course-module {
+		padding: 1em;
+		border-radius: var(--btn-border-radius);
+		height: 80svh;
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		overflow-y: scroll;
+
+		box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+			rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+		background-color: var(--white-color);
+	}
+	.course-module-group {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+	.course-module {
+		border: 1px solid red;
+		padding: 1em 0.2em;
+	}
+	.module {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	.hidden > div {
+		display: none;
+	}
+}

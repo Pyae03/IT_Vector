@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link
+			rel="stylesheet"
+			href="student-course-player.style.css" />
+
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="video-and-content">
+				<div class="video-player">
+					<video controls>
+						<source
+							src="video/Attack on Titan S4 OST - -Splinter Wolf-.mp4"
+							type="video/mp4" />
+					</video>
+				</div>
+				<div class="content">
+					<h2>Title</h2>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+						veritatis quisquam pariatur sint ducimus in cupiditate nam eligendi
+						unde, consectetur, officia ratione quo a commodi quaerat
+						perspiciatis! Debitis, praesentium odio. Vero, officia similique?
+						Provident dolores aut maiores quaerat, iste voluptas in ex
+						perferendis temporibus nemo nesciunt distinctio eius dicta
+						similique, vitae qui voluptatibus culpa assumenda totam eos? Veniam,
+						nemo dolore! Quis, dolores eos quisquam necessitatibus, id doloribus
+						aperiam facilis mollitia veniam nam vero voluptatibus, nulla rem
+						incidunt vitae quidem sunt velit similique illo dignissimos tempora
+						libero delectus. Consectetur, iure eaque.
+					</p>
+				</div>
+			</div>
+
+			<div class="view-course-module">
+				<div class="course-module-group">
+					<h2>Introduction</h2>
+					<div class="course-module">
+						<div class="module">
+							<img
+								src="image/achievement.svg"
+								alt="" />
+
+							<h3>What is computer sicnence</h3>
+							<p>12:00</p>
+						</div>
+					</div>
+					<div class="course-module">
+						<div class="module active">
+							<img
+								src="image/achievement.svg"
+								alt="" />
+							<h3>What is computer sicnence</h3>
+							<p>12:00</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script>
+		const course_module_group = document.querySelector(".course-module-group");
+
+		course_module_group.addEventListener("click", () => {
+			course_module_group.classList.toggle("hidden");
+		});
+	</script>
+</html>
