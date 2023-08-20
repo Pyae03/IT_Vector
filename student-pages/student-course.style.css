@@ -70,6 +70,7 @@ body {
 		border-color: transparent #283747 transparent transparent;
 		position: absolute;
 	}
+
 	.course-card-title {
 		display: flex;
 		flex-direction: column;

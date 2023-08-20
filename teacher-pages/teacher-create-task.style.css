@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Nunito:wght@200;300;400&display=swap");
+
+:root {
+	--bg-color: #eff3f9;
+	--white-color: #fff;
+	--light-purple: #9db7fb;
+	--light-blue: #60b9ff;
+	--dark-blue: #283747;
+	--light-gray: #eaecee;
+	--btn-border-radius: 0.5em;
+	--light-gray2: #d5d8dc;
+	--red: #e74c3c;
+	--light-green: #69fcb5;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+img,
+picture,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Nunito", "Lato";
+	color: #283747;
+}
+
+body {
+	min-height: 100vh;
+}
+
+@media (min-width: 1440px) {
+	.wrapper {
+		display: flex;
+	}
+	.side-bar {
+		flex: 0.145;
+	}
+	main {
+		margin: 2em;
+		flex: 0.8;
+		display: flex;
+		flex-direction: column;
+	}
+	.create-tasks {
+		display: flex;
+		gap: 1em;
+		padding: 1em;
+		background-color: var(--white-color);
+		border-radius: var(--btn-border-radius);
+		box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+	}
+	button {
+		font-size: 1.2em;
+		padding: 0.7em;
+		border-radius: var(--btn-border-radius);
+		border: none;
+	}
+	.create-tasks button:nth-child(1) {
+		background-color: var(--light-blue);
+		color: var(--white-color);
+	}
+	.create-tasks button:nth-child(2) {
+		background-color: var(--light-purple);
+		color: var(--white-color);
+	}
+	.create-tasks button:nth-child(3) {
+		background-color: var(--light-blue);
+		color: var(--dark-blue);
+	}
+
+	/* current -task */
+	.current-tasks {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		margin-top: 1.5em;
+	}
+	.current-tasks-group {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+		grid-template-rows: repeat(auto-fill, minmax(10em, 1fr));
+		gap: 1em;
+	}
+	.task {
+		padding: 1em;
+		background-color: var(--white-color);
+		border-radius: var(--btn-border-radius);
+		transition: 0.3s ease;
+	}
+	/* .task span {
+		color: var(--light-gray2);
+	} */
+	.task:hover {
+		border: 1px solid var(--light-blue);
+		transition: 0.3s ease;
+		transform: scale(1.05);
+	}
+
+	.hidden {
+		display: none;
+		transition: 0.3 ease;
+	}
+
+	/* all forms */
+	.assignment-creation-form {
+		position: relative;
+		left: 25%;
+		margin: 1em;
+		background-color: var(--white-color);
+		padding: 1.5em;
+		width: 35em;
+		height: 38em;
+		border-radius: var(--btn-border-radius);
+		transition: 0.3 ease;
+	}
+	.assignment-creation-form form {
+		display: flex;
+		gap: 1em;
+		flex-direction: column;
+		font-size: 1.2em;
+	}
+	.assignment-creation-form form input[type="text"] {
+		height: 2.8em;
+	}
+	.assignment-creation-form form select {
+		font-size: 1em;
+	}
+	.assignment-creation-form form input[type="submit"] {
+		border: none;
+		background-color: var(--light-green);
+		font-size: 1em;
+		color: var(--dark-blue);
+		padding: 1em;
+		font-weight: bold;
+		border-radius: var(--btn-border-radius);
+	}
+	.custom-file-upload {
+		border: 1px solid #ccc;
+		display: inline-block;
+		padding: 6px 12px;
+		cursor: pointer;
+	}
+}
