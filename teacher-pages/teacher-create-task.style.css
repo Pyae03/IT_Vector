@@ -112,7 +112,9 @@ body {
 	}
 
 	/* all forms */
-	.assignment-creation-form {
+	.assignment-creation-form,
+	.quiz-creation-form,
+	.homework-creation-form {
 		position: relative;
 		left: 25%;
 		margin: 1em;
@@ -123,7 +125,9 @@ body {
 		border-radius: var(--btn-border-radius);
 		transition: 0.3 ease;
 	}
-	.assignment-creation-form form {
+	.assignment-creation-form form,
+	.quiz-creation-form form,
+	.homework-creation-form form {
 		display: flex;
 		gap: 1em;
 		flex-direction: column;
@@ -135,7 +139,9 @@ body {
 	.assignment-creation-form form select {
 		font-size: 1em;
 	}
-	.assignment-creation-form form input[type="submit"] {
+	.assignment-creation-form form input[type="submit"],
+	.quiz-creation-form form input[type="submit"],
+	.homework-creation-form form input[type="submit"] {
 		border: none;
 		background-color: var(--light-green);
 		font-size: 1em;
@@ -150,4 +156,6 @@ body {
 		padding: 6px 12px;
 		cursor: pointer;
 	}
+
+	/* quiz creation form */
 }

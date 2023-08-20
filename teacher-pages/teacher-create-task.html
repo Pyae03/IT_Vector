@@ -145,7 +145,51 @@
 						</form>
 					</div>
 
-					<div class="quiz-creation-form"></div>
+					<div class="quiz-creation-form hidden">
+						<form action="">
+							<label for="quiz-question">Quiz Question</label>
+							<textarea
+								name="quiz-question"
+								id="quiz-question"
+								cols="30"
+								rows="5"></textarea>
+							<div class="radio-choice-group">
+								<div class="radio-choice">
+									<input
+										type="radio"
+										id="choice" />
+									<label for="choice">Choice1</label>
+								</div>
+							</div>
+
+							<button class="btn-create-choice">Create Choice</button>
+							<input
+								type="submit"
+								value="Save" />
+						</form>
+					</div>
+
+					<div class="homework-creation-form">
+						<form action="">
+							<label for="homework-title"> Homework Title </label>
+							<input
+								type="text"
+								id="homework-title"
+								name="homework-title" />
+
+							<label for="homework-attachment">
+								Attachment
+								<input
+									class="custom-file-upload"
+									type="file"
+									id="homework-attachment"
+									name="homework-attachment" />
+							</label>
+							<input
+								type="submit"
+								value="Save" />
+						</form>
+					</div>
 
 					<div class="current-tasks">
 						<h2>Current Tasks</h2>
