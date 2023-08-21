@@ -38,6 +38,27 @@ body {
 	min-height: 100vh;
 }
 
+/* helper css */
+.active {
+	background-color: var(--light-gray2);
+}
+.active::before {
+	content: "";
+	background-color: var(--dark-blue);
+	position: absolute;
+	width: 0.4em;
+	height: 3em;
+	display: flex;
+	flex-direction: column;
+}
+.hidden {
+	display: none;
+	transition: 0.3 ease;
+}
+.cancel {
+	background-color: var(--red);
+}
+
 @media (min-width: 1440px) {
 	.wrapper {
 		display: flex;
@@ -77,18 +98,7 @@ body {
 		background-color: var(--light-blue);
 		color: var(--dark-blue);
 	}
-	.active {
-		background-color: var(--light-gray2);
-	}
-	.active::before {
-		content: "";
-		background-color: var(--dark-blue);
-		position: absolute;
-		width: 0.4em;
-		height: 3em;
-		display: flex;
-		flex-direction: column;
-	}
+
 	/* current -task */
 	.current-tasks {
 		display: flex;
@@ -117,11 +127,6 @@ body {
 		transform: scale(1.05);
 	}
 
-	.hidden {
-		display: none;
-		transition: 0.3 ease;
-	}
-
 	/* all forms */
 	.assignment-creation-form,
 	.quiz-creation-form,
@@ -141,7 +146,7 @@ body {
 	.quiz-creation-form form,
 	.homework-creation-form form {
 		display: flex;
-		gap: 1em;
+		gap: 1.4em;
 		flex-direction: column;
 		font-size: 1.2em;
 	}
@@ -172,4 +177,10 @@ body {
 	}
 
 	/* quiz creation form */
+	.btn-add-choice {
+		font-size: 0.8em;
+	}
+	.quiz-creation-form select {
+		font-size: 1em;
+	}
 }

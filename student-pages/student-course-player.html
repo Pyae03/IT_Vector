@@ -56,8 +56,16 @@
 			<div class="view-course-module">
 				<div class="course-module-group">
 					<div class="course-module">
-						<h1 class="module-title">Introduction to Web Development</h1>
-						<div class="module-outline"></div>
+						<h2 class="module-title">Introduction to Web Development</h2>
+						<div class="module-outline">
+							<a
+								href=""
+								class="done"
+								>What is web Development?</a
+							>
+							<a href="">What is web Development?</a>
+							<a href="">What is web Development?</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -65,9 +73,49 @@
 	</body>
 
 	<script>
-		const module_title = document.querySelectorAll(".module-title");
-		const module = document.querySelectorAll(".module");
-		const course_module = document.querySelector(".course-module");
-		const icon_dropdown = document.querySelectorAll(".icon-dropdown");
+		const myArr = [1, 2, 3];
+		const linkArr = [1, 2];
+
+		const course_module_group = document.querySelector(".course-module-group");
+
+		function createCourseModule(courseModuleID) {
+			const course_module = document.createElement("div");
+			course_module.className = "course-module";
+			course_module.id = courseModuleID;
+
+			const module_title = document.createElement("h2");
+			module_title.className = "module-title";
+			module_title.innerText = "hello world";
+
+			const module_outline = document.createElement("div");
+			module_outline.className = "module-outline";
+			module_outline.classList.add("hidden");
+			module_title.addEventListener("click", () => {
+				console.log("clicked");
+				module_outline.classList.toggle("hidden");
+			});
+
+			linkArr.forEach((link) => {
+				const course_link = createCourseLink(link);
+				module_outline.appendChild(course_link);
+			});
+			course_module.appendChild(module_title);
+			course_module.appendChild(module_outline);
+			return course_module;
+		}
+
+		function createCourseLink(link, text) {
+			const course_link = document.createElement("a");
+			course_link.href = link;
+			course_link.innerText = "TEXT";
+			return course_link;
+		}
+
+		myArr.forEach((course) => {
+			const course_module = createCourseModule(course);
+			console.log("created");
+
+			course_module_group.appendChild(course_module);
+		});
 	</script>
 </html>

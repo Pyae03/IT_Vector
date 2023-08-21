@@ -13,7 +13,7 @@ const btn_create_quiz = document.querySelector(".btn-create-quiz");
 const btn_create_homework = document.querySelector(".btn-create-homework");
 
 // quiz form
-const btn_create_choice = document.querySelector(".btn-create-choice");
+const btn_add_choice = document.querySelector(".btn-add-choice");
 const radio_choice_group = document.querySelector(".radio-choice-group");
 
 // assignment
@@ -23,23 +23,44 @@ btn_create_assignment.addEventListener("click", () => {
 // quiz
 btn_create_quiz.addEventListener("click", () => {
 	quiz_creation_form.classList.toggle("hidden");
+	if (btn_create_quiz.innerText === "Add Quiz") {
+		// change color and text
+		btn_create_quiz.style.backgroundColor = "var(--red)";
+		return (btn_create_quiz.innerText = "Cancel");
+	}
+	btn_create_quiz.innerHTML = "Add Quiz";
+	btn_create_quiz.style.backgroundColor = "var(--light-purple)";
 });
-btn_create_choice.addEventListener("click", () => {
-	const radio_choice = document.createElement("div");
 
-	const input_radio = document.createElement("input");
-	input_radio.type = "radio";
+// get input
+const choice_data = document.querySelector(".choice-data");
+btn_add_choice.addEventListener("click", (event) => {
+	event.preventDefault();
 
-	const choice_label = document.createElement("label");
-	choice_label.innerText = "RadioChoice";
+	if (choice_data.value) {
+		const choice_option = document.createElement("input");
+		choice_option.type = "radio";
+		choice_option.value = choice_data.value;
+		choice_option.id = choice_data.value;
+		// change name in here if you do with backend
+		choice_option.name = "quiz1";
 
-	radio_choice.appendChild(input_radio);
-	radio_choice.appendChild(choice_label);
-	radio_choice_group.appendChild(radio_choice);
-	console.log("created!");
+		const choice_label = document.createElement("label");
+		choice_label.innerText = choice_data.value;
+		choice_label.setAttribute("for", choice_data.value);
+
+		const choice = document.createElement("div");
+		choice.appendChild(choice_option);
+		choice.appendChild(choice_label);
+		return radio_choice_group.appendChild(choice);
+	}
 });
 
 // homework
-btn_create_homework.addEventListener("click", () => {
-	homework_creation_form.classList.toggle("hidden");
-});
+// btn_create_homework.addEventListener("click", () => {
+// 	homework_creation_form.classList.toggle("hidden");
+// });
+
+//todo: code this
+// if teacher choose course, course-module select data will change according
+// to which module teacher choose

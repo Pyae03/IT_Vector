@@ -62,7 +62,7 @@
 			<div class="wrapper">
 				<div class="side-bar">
 					<div class="outer-2">
-						<a href="teacher-course.html">
+						<a href="teacher-chat.html">
 							<div class="element">
 								<img
 									src="image/course.svg"
@@ -97,8 +97,8 @@
 				<main>
 					<div class="create-tasks">
 						<button class="btn-create-assignment">Create Assignment</button>
-						<button class="btn-create-quiz">Create Quiz</button>
-						<button class="btn-create-homework">Create Homework</button>
+						<button class="btn-create-quiz">Add Quiz</button>
+						<!-- <button class="btn-create-homework">Create Homework</button> -->
 					</div>
 
 					<div class="assignment-creation-form hidden">
@@ -153,29 +153,46 @@
 								id="quiz-question"
 								cols="30"
 								rows="5"></textarea>
-							<div class="radio-choice-group">
-								<div class="radio-choice">
-									<input
-										type="radio"
-										id="choice" />
-									<label for="choice">Choice1</label>
-								</div>
-								<div class="radio-choice">
-									<input
-										type="radio"
-										id="choice" />
-									<label for="choice">Choice1</label>
-								</div>
-							</div>
+							<div class="radio-choice-group"></div>
 
-							<button class="btn-create-choice">Create Choice</button>
+							<label for="choice-option">
+								<div
+									class="choice-option custom-file-upload"
+									id="choice-option">
+									<input
+										type="text"
+										placeholder="type another option"
+										class="choice-data" />
+									<button class="btn-add-choice">Add Choice</button>
+								</div>
+							</label>
+
+							<select
+								name="course"
+								id="course">
+								<!-- get these data from backend -->
+								<option value="Web Application Development">
+									Web Application Development
+								</option>
+								<option value="Introduction To Computer Science">
+									Introduction To Computer Science
+								</option>
+							</select>
+
+							<select
+								name="course-module"
+								id="">
+								<!-- get these data from backend -->
+								<option value="module-1">Module 1</option>
+								<option value="module-1">Module 2</option>
+							</select>
 							<input
 								type="submit"
 								value="Save" />
 						</form>
 					</div>
 
-					<div class="homework-creation-form hidden">
+					<!-- <div class="homework-creation-form hidden">
 						<form action="">
 							<label for="homework-title"> Homework Title </label>
 							<input
@@ -195,7 +212,7 @@
 								type="submit"
 								value="Save" />
 						</form>
-					</div>
+					</div> -->
 
 					<div class="current-tasks">
 						<h2>Current Tasks</h2>
