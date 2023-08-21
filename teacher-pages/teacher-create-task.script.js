@@ -23,7 +23,6 @@ btn_create_assignment.addEventListener("click", () => {
 // quiz
 btn_create_quiz.addEventListener("click", () => {
 	quiz_creation_form.classList.toggle("hidden");
-	assignment_creation_form.classList.remove("hidden");
 });
 btn_create_choice.addEventListener("click", () => {
 	const radio_choice = document.createElement("div");

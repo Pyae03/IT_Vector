@@ -11,7 +11,7 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
 		<title>Example</title>
-		<!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
+		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 	</head>
 	<body>
 		<div id="particles-js"></div>
@@ -31,8 +31,8 @@
 					<a href="#">Contact</a>
 				</div>
 				<div class="sign-in-up">
-					<a href="#"> Sign In </a>
-					<a href="#"> Sign Up </a>
+					<a href="../user-authentication/login.html"> Sign In </a>
+					<a href="../user-authentication/register.html"> Sign Up </a>
 				</div>
 			</nav>
 
@@ -150,7 +150,7 @@
 			<section
 				class="system"
 				style="
-					height: 100svh;
+					height: 110svh;
 					background: radial-gradient(circle, #8e9194 10%, transparent 11%);
 					background-size: 2em 2em;
 					background-color: #eff3f9;
@@ -158,7 +158,7 @@
 				">
 				<div class="bg-image"></div>
 				<div class="card-left-1">
-					<h2>Tates Great Less Cloud</h2>
+					<h2>Student DashBoard</h2>
 
 					<p>
 						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -166,7 +166,7 @@
 					</p>
 				</div>
 				<div class="card-left-2">
-					<h2>Tates Great Less Cloud</h2>
+					<h2>Course Video Player</h2>
 
 					<p>
 						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -183,7 +183,7 @@
 					</p>
 				</div>
 				<div class="card-right-1">
-					<h2>Tates Great Less Cloud</h2>
+					<h2>Quiz, Assignemt, Homework</h2>
 
 					<p>
 						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -191,7 +191,7 @@
 					</p>
 				</div>
 				<div class="card-right-2">
-					<h2>Tates Great Less Cloud</h2>
+					<h2>Multiple Courses</h2>
 
 					<p>
 						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -204,7 +204,7 @@
 				<div class="first-section">
 					<h1>About the Our Website</h1>
 					<p>Home</p>
-					<p>Become a customer</p>
+
 					<p>About us</p>
 					<p>FAQ</p>
 					<p>Return policy</p>
@@ -215,14 +215,14 @@
 					<h1>Language</h1>
 					<div class="language-group">
 						<p>English</p>
-						<p>Deutsch</p>
+						<!--<p>Deutsch</p>
 						<p>Espanol</p>
 						<p>Francais</p>
 						<p>Portugues</p>
 						<p>Indonesian</p>
 						<p>Italian</p>
 						<p>Nederlands</p>
-						<p>Polnisch</p>
+						<p>Polnisch</p> -->
 					</div>
 				</div>
 
@@ -247,14 +247,14 @@
 		<script>
 			// Particle.js configuration
 
-			// fetch("particlesjs-config.json")
-			// 	.then((response) => response.json())
-			// 	.then((data) => {
-			// 		particlesJS("particles-js", data);
-			// 	})
-			// 	.catch((error) =>
-			// 		console.error("Error loading Particle.js config:", error)
-			// 	);
+			fetch("particlesjs-config.json")
+				.then((response) => response.json())
+				.then((data) => {
+					particlesJS("particles-js", data);
+				})
+				.catch((error) =>
+					console.error("Error loading Particle.js config:", error)
+				);
 		</script>
 	</body>
 </html>

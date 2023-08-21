@@ -77,7 +77,18 @@ body {
 		background-color: var(--light-blue);
 		color: var(--dark-blue);
 	}
-
+	.active {
+		background-color: var(--light-gray2);
+	}
+	.active::before {
+		content: "";
+		background-color: var(--dark-blue);
+		position: absolute;
+		width: 0.4em;
+		height: 3em;
+		display: flex;
+		flex-direction: column;
+	}
 	/* current -task */
 	.current-tasks {
 		display: flex;
@@ -121,10 +132,11 @@ body {
 		background-color: var(--white-color);
 		padding: 1.5em;
 		width: 35em;
-		height: 38em;
+		height: 100%;
 		border-radius: var(--btn-border-radius);
 		transition: 0.3 ease;
 	}
+
 	.assignment-creation-form form,
 	.quiz-creation-form form,
 	.homework-creation-form form {
@@ -133,7 +145,9 @@ body {
 		flex-direction: column;
 		font-size: 1.2em;
 	}
-	.assignment-creation-form form input[type="text"] {
+	.assignment-creation-form form input[type="text"],
+	.quiz-creation-form form input[type="text"],
+	.homework-creation-form form input[type="text"] {
 		height: 2.8em;
 	}
 	.assignment-creation-form form select {

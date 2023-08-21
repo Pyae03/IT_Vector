@@ -66,7 +66,9 @@ body {
 	.side-bar > div:last-child {
 		margin-top: auto;
 	}
-
+	.active {
+		background-color: var(--light-gray);
+	}
 	.active::before {
 		content: "";
 		background-color: var(--dark-blue);

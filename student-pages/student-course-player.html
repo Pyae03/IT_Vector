@@ -21,7 +21,7 @@
 					<h3>Teacher Name</h3>
 				</div>
 			</a>
-			<a href="#">
+			<a href="student-dashboard.html">
 				<h3>Back</h3>
 			</a>
 		</nav>
@@ -56,57 +56,8 @@
 			<div class="view-course-module">
 				<div class="course-module-group">
 					<div class="course-module">
-						<div
-							id="1"
-							class="module-title">
-							<h2>
-								Introduction
-								<span class="icon-dropdown"
-									><img
-										src="image/down-arrow.svg"
-										alt=""
-								/></span>
-							</h2>
-						</div>
-						<div class="module">
-							<img
-								src="image/achievement.svg"
-								alt="" />
-
-							<h3>What is computer sicnence</h3>
-							<p>12:00</p>
-						</div>
-						<div class="module">
-							<img
-								src="image/achievement.svg"
-								alt="" />
-
-							<h3>What is computer sicnence</h3>
-							<p>12:00</p>
-						</div>
-					</div>
-					<div class="course-module">
-						<div
-							id="2"
-							class="module-title">
-							<h2>Introduction to Web Development</h2>
-						</div>
-						<div class="module">
-							<img
-								src="image/achievement.svg"
-								alt="" />
-
-							<h3>What is computer sicnence</h3>
-							<p>12:00</p>
-						</div>
-						<div class="module">
-							<img
-								src="image/achievement.svg"
-								alt="" />
-
-							<h3>What is computer sicnence</h3>
-							<p>12:00</p>
-						</div>
+						<h1 class="module-title">Introduction to Web Development</h1>
+						<div class="module-outline"></div>
 					</div>
 				</div>
 			</div>
@@ -118,12 +69,5 @@
 		const module = document.querySelectorAll(".module");
 		const course_module = document.querySelector(".course-module");
 		const icon_dropdown = document.querySelectorAll(".icon-dropdown");
-		module_title.forEach((mt) => {
-			mt.addEventListener("click", (event) => {
-				// rotate didn't work
-				icon_dropdown.classList.toggle("rotate");
-				module.forEach((m) => m.classList.toggle("hidden"));
-			});
-		});
 	</script>
 </html>

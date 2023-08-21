@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Nunito:wght@200;300;400&display=swap");
+
+:root {
+	--bg-color: #eff3f9;
+	--white-color: #fff;
+	--light-purple: #9db7fb;
+	--light-blue: #60b9ff;
+	--dark-blue: #283747;
+	--light-gray: #eaecee;
+	--btn-border-radius: 0.5em;
+	--light-gray2: #d5d8dc;
+	--red: #e74c3c;
+	--light-green: #69fcb5;
+}
+
+* {
+    font-family: 'Lato', monospace, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+/* helper css */
+.hidden {
+    display: none;
+    transform: .3s ease;
+}
+.become-blur {
+    filter: blur(3px);
+}
+
+.container {
+    padding: 2em;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr .5fr 5fr;
+    grid-template-rows: .7fr .7fr;
+    
+}
+
+.profile-name>p>span {
+    color: #B2ADAC;
+}
+
+.profile-card-group {}
+
+.card {
+    padding: 3%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 20em;
+    height: 15em;
+    font-size: 110%;
+    border-radius: .3em;
+    background-color: white;
+}
+
+
+
+
+.profile-image {
+
+    /* width: 5em;
+    height: 5em; */
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-image img {
+    border-radius: 50%;
+    width: 4em;
+    height: 4em;
+    object-fit: cover;
+
+}
+
+.profile-name>p {
+    font-size: 120%;
+    margin: 0;
+}
+
+button {
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5em;
+    width: 6em;
+    height: 2.5rem;
+    font-size: 105%;
+}
+
+.btn-1 {
+    margin-top: 3.5em;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+/* for card 2 */
+
+
+.profile-image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* for card 3  */
+.profile-card3 {
+    width: 25.5em;
+}
+
+.follower-detail {
+    display: flex;
+    gap: 1em;
+    margin-left: 0;
+    align-items: center;
+
+}
+
+
+
+.follower-detail p::before {
+    content: "";
+    width: .6em;
+    height: .6em;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #D1D1D1;
+    border-inline: .3em solid #fff;
+
+}
+
+
+.profile-card3 .profile-image button {
+    background-color: #323130;
+    color: white;
+    border: none;
+}
+
+
+/* profile cards position */
+
+.profile-card1 {
+    position: absolute;
+    top: 1%;
+    left: 25%;
+}
+
+.profile-card2 {
+    position: absolute;
+    top: 1%;
+    right: 15%;
+}
+
+.profile-card3 {
+    
+}
+
+/* badage component */
+.badage {
+    display: inline-block;
+}
+.badage-group {
+    /* display: inline-block; */
+    margin-top: 2em;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(.1em, .1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+
+
+    gap: .7em;
+    text-align: center;
+    overflow-wrap: break-word;
+    align-items: center;
+}
+.badage-group > p {
+    color: var(--light-blue);
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    font-size: 90%;
+    border: 1px solid var(--light-blue);
+    border-radius: 2.5em;
+    padding: 3%;
+    
+} 
+
+.btn-group {
+    display: flex;
+    position: absolute;
+    gap: .7em;
+    bottom: 2em;
+}
+.btn-group a {
+    text-decoration: none;
+    color: var(--dark-blue);
+    background-color: var(--white-color);
+    padding: 1em;
+    border-radius: var(--btn-border-radius);
+}
+
+
+.profile-edit-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 1em;
+    background-color: var(--white-color);
+    width: 25%;
+    height: 60%;
+    padding: 2em;
+    border-radius: var(--btn-border-radius);
+    border: 2px solid var(--light-purple);
+    
+}
+.profile-edit-form form {
+    display: flex;
+    flex-direction: column;   
+}
+.btn-group {
+    display: flex;
+    gap: 1em;
+    width: 100%;
+}
+.btn-group > button {
+    color: var(--red);
+    /* border-color: var(--red); */
+}
+.btn-group > input {
+    font-size: 1.2em;
+    border-radius: 1.2em;
+    padding: 0em 2em;
+    border: none;
+    background-color: var(--light-green);
+    color: var(--white-color);
+}
