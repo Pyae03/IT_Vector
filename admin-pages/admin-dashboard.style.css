@@ -10,6 +10,7 @@
 	--btn-border-radius: 0.5em;
 	--light-gray2: #d5d8dc;
 	--red: #e74c3c;
+	--light-green: #69fcb5;
 }
 
 *,
@@ -72,5 +73,68 @@ body {
 		background-color: var(--white-color);
 		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
 			rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+	}
+
+	/* btn-features */
+	.btn-features {
+		background-color: var(--white-color);
+		padding: 2em 1em;
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+			rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+	}
+	.btn-features button {
+		font-size: 1.2em;
+		border: none;
+		padding: 0.5em;
+		border-radius: var(--btn-border-radius);
+		background-color: var(--light-green);
+	}
+
+	/* user creation form */
+	.user-creation-form {
+		display: flex;
+		padding: 1em;
+		align-items: center;
+		background-color: var(--white-color);
+		position: relative;
+		left: 35%;
+		width: 30%;
+		height: 100%;
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+			rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+		transition: 0.3s ease;
+	}
+	.user-creation-form form {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		width: 100%;
+
+		font-size: 1.1em;
+	}
+	.user-creation-form form input,
+	.user-creation-form form select {
+		height: 2.2em;
+		font-size: 1.1em;
+	}
+	.btn-confirm {
+	}
+	.btn-confirm input {
+		width: 7em;
+		border: none;
+		padding: 0.4em 2em;
+		border-radius: var(--btn-border-radius);
+
+		align-items: center;
+	}
+	.btn-confirm input[type="submit"] {
+		background-color: var(--light-green);
+	}
+	/* helper css */
+	.hidden {
+		display: none;
+		transition: 0.3s ease;
+		opacity: 0;
 	}
 }

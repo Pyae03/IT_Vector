@@ -151,7 +151,8 @@ body {
 	.user-info-title,
 	.user-info-detail {
 		display: grid;
-		grid-template-columns: 1fr 0.5fr 0.5fr 1fr 1fr;
+		/* name, gender, date of birth, id, email, achievement earned, functions */
+		grid-template-columns: 0.85fr 0.2fr 0.3fr 0.7fr 1fr 0.45fr 0.4fr;
 		align-items: center;
 
 		padding: 1em 0em;

@@ -3,11 +3,11 @@
 	<head>
 		<link
 			rel="stylesheet"
-			href="admin-nav-bar.style.css" />
-
+			href="admin-total-user.style.css" />
 		<link
 			rel="stylesheet"
-			href="admin-achievement.style.css" />
+			href="admin-nav-bar.style.css" />
+
 		<meta charset="UTF-8" />
 		<meta
 			name="viewport"
@@ -24,10 +24,14 @@
 			</div>
 
 			<div class="view-options">
-				<a href="admin-dashboard.html">DashBoard</a>
+				<a
+					href="admin-dashboard.html"
+					class="active"
+					>DashBoard</a
+				>
 				<a
 					href="admin-achievement.html"
-					class="active"
+					class=""
 					>Achievements</a
 				>
 				<a href="admin-event.html">Event</a>
@@ -60,18 +64,21 @@
 			</div>
 		</nav>
 
-		<!-- users database view for admin -->
-
 		<div class="container">
 			<div class="title">
 				<div class="view-title">
 					<img
-						src="image/achievement.svg"
+						src="image/database.svg"
 						alt="" />
-					<h2>Achievements</h2>
+					<h2>User Info</h2>
 				</div>
 
-				<!-- <div class="role-title">
+				<div class="role-title">
+					<a
+						href="#"
+						class="active"
+						>All</a
+					>
 					<a
 						href="#"
 						class=""
@@ -83,16 +90,18 @@
 						>Teacher</a
 					>
 					<a href="#">Admin</a>
-				</div> -->
+				</div>
 			</div>
 
 			<div class="user-list">
 				<div class="user-info-title">
 					<p>Name</p>
 					<p>Gender</p>
+					<p>Date of Birth</p>
 					<p>ID</p>
-					<p>Total Earned</p>
 					<p>Email</p>
+					<p>Created Date</p>
+					<p>Functions</p>
 				</div>
 
 				<!-- add users information from database in here -->
@@ -107,9 +116,22 @@
 						</a>
 					</div>
 					<p>Male</p>
+					<p>15-05-2003</p>
 					<p>KPTMYK-001217</p>
-					<p>1</p>
 					<p>pyaehein.sky@gmail.com</p>
+					<p>15-05-2003</p>
+					<div class="btn-crud">
+						<a
+							href="#"
+							class="btn-edit"
+							><ion-icon name="create-outline"></ion-icon
+						></a>
+						<a
+							href="#"
+							class="btn-delete"
+							><ion-icon name="trash-outline"></ion-icon
+						></a>
+					</div>
 				</div>
 
 				<div class="user-info-detail">
@@ -122,9 +144,22 @@
 						</a>
 					</div>
 					<p>Male</p>
+					<p>15-05-2003</p>
 					<p>KPTMYK-001217</p>
-					<p>1</p>
 					<p>erenyeager.aot.anime@gmail.com</p>
+					<p>15-05-2003</p>
+					<div class="btn-crud">
+						<a
+							href="#"
+							class="btn-edit"
+							><ion-icon name="create-outline"></ion-icon
+						></a>
+						<a
+							href="#"
+							class="btn-delete"
+							><ion-icon name="trash-outline"></ion-icon
+						></a>
+					</div>
 				</div>
 
 				<div class="user-info-detail">
@@ -137,11 +172,31 @@
 						</a>
 					</div>
 					<p>Female</p>
+					<p>15-05-2003</p>
 					<p>KPTMYK-001217</p>
-					<p>2</p>
 					<p>mikasaackerman.aot.anime@gmail.com</p>
+					<p>15-05-2003</p>
+					<div class="btn-crud">
+						<a
+							href="#"
+							class="btn-edit"
+							><ion-icon name="create-outline"></ion-icon
+						></a>
+						<a
+							href="#"
+							class="btn-delete"
+							><ion-icon name="trash-outline"></ion-icon
+						></a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</body>
+
+	<script
+		type="module"
+		src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script
+		nomodule
+		src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>

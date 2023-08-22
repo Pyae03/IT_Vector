@@ -32,7 +32,7 @@
 				<a
 					href="admin-database.html"
 					class=""
-					>Database</a
+					>User Info</a
 				>
 			</div>
 
@@ -93,6 +93,42 @@
 						<h3>3</h3>
 					</div>
 				</div>
+
+
+				<div class="btn-features">
+					<button class="btn-create-new-user">Create New User</button>
+				</div>
+
+
+				<div class="user-creation-form hidden">
+					<form action="">
+						<label for="username">Username</label>
+						<input type="text" id="username" required>
+						
+						<label for="email">Email</label>
+						<input type="email" required>
+
+						<label for="gender" >Gender</label>
+						<select name="gender" id="gender" required>
+							<option value="Male">Male</option>
+							<option value="Female">Female</option>
+						</select>
+
+						<label for="date-of-birth">Date of Birth</label>
+						<input type="date" id="date-of-birth">
+
+						<label for="course">Select Course</label>
+						<select name="course" id="course">
+							<option value="Web Application Development">Web Applicaton Development</option>
+							<option value="Introduction to Computer Science">Introduction to Computer Science</option>
+						</select>
+
+						<div class="btn-confirm">
+							<input type="submit">
+							<input type="reset">
+						</div>
+					</form>
+				</div>
 			</div>
 
 
@@ -100,5 +136,14 @@
 
 		</div>
 		</div>
+
+		<script>
+			const btn_create_user = document.querySelector(".btn-create-new-user")
+			const user_creation_form = document.querySelector(".user-creation-form")
+
+			btn_create_user.addEventListener("click", () => {
+				user_creation_form.classList.toggle("hidden")
+			})
+		</script>
 	</body>
 </html>
