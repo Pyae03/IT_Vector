@@ -38,7 +38,105 @@ body {
 	min-height: 100vh;
 }
 
-/* helper css */
+
+
+@media (min-width: 1440px) {
+
+	.container {
+		margin-inline: 5em;
+		display: flex;
+		flex-direction: column;
+		gap: 2.5em;
+	}
+	.container > div {
+		padding: 2em;
+	}
+	.course-preview {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+	.course-preview video {
+		width: 100%;
+	}
+	.course-description{
+		background-color: var(--dark-blue);
+		
+	}
+	.course-description article h2,
+	.course-description article p,
+	.course-description article a {
+		color: var(--white-color);
+	}
+
+	.what-you-will-learn {
+		border: 1px solid var(--light-gray2);
+	}
+	.what-you-will-learn > article {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(auto-fit, minmax(1fr));
+	}
+
+	.course-include {
+		border: 1px solid var(--light-gray2);
+	}
+	
+	.course-content {
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+	}
+
+	.course-module-group {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+	.course-module {
+		border: 1px solid var(--light-gray2);
+		background-color: var(--light-gray);
+	}
+	.module-title {
+		padding: 1em 1em;
+	}
+
+	.module-outline {
+		padding: 1em 2em;
+		flex-direction: column;
+		display: flex;
+		gap: 2em;
+		background-color: var(--white-color);
+	}
+	
+	.module-outline a {
+		background-color: var(--white-color);
+	}
+
+	
+
+	.requirements-and-course-description {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+	.course-detail-description p,
+	.course-detail-description h2 {
+		background-color: var(--white-color);
+	}
+
+	.teacher {
+		border: 1px solid var(--light-gray2);
+	}
+	.teacher-introduction > img{
+		border-radius: 50%;
+		width: 7em;
+		height: 7em;
+
+	}
+
+	/* helper css */
 
 .hidden {
 	display: none;
@@ -47,27 +145,9 @@ body {
 .cancel {
 	background-color: var(--red);
 }
-
-@media (min-width: 1440px) {
-	.course-module-group {
-		display: flex;
-		flex-direction: column;
-		gap: 1em;
-	}
-	.course-module {
-		border: 1px solid red;
-	}
-	.module-outline {
-		display: flex;
-		flex-direction: column;
-	}
-	.module-outline a {
-		background-color: var(--white-color);
-	}
-
-	.done {
-	}
-	.done::after {
-		content: "✅";
-	}
+.done {
+}
+.done::after {
+	content: "✅";
+}
 }
