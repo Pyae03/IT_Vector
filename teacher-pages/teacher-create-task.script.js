@@ -49,9 +49,15 @@ btn_add_choice.addEventListener("click", (event) => {
 		choice_label.innerText = choice_data.value;
 		choice_label.setAttribute("for", choice_data.value);
 
+		// correct answer
+		const checkbox = document.createElement("input");
+		checkbox.type = "checkbox";
+
 		const choice = document.createElement("div");
+		choice.className = "option";
 		choice.appendChild(choice_option);
 		choice.appendChild(choice_label);
+		choice.appendChild(checkbox);
 		return radio_choice_group.appendChild(choice);
 	}
 });

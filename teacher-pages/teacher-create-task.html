@@ -151,14 +151,13 @@
 					<div class="quiz-creation-form hidden">
 						<form action="">
 							<label for="quiz-question">Quiz Question</label>
-							<textarea
-								name="quiz-question"
-								id="quiz-question"
-								cols="30"
-								rows="5"></textarea>
+							<input
+								type="text"
+								id="quiz-question" />
+
 							<div class="radio-choice-group"></div>
 
-							<label for="choice-option">
+							<div class="option-group">
 								<div
 									class="choice-option custom-file-upload"
 									id="choice-option">
@@ -166,9 +165,9 @@
 										type="text"
 										placeholder="type another option"
 										class="choice-data" />
-									<button class="btn-add-choice">Add Choice</button>
+									<button class="btn-add-choice">Add Option</button>
 								</div>
-							</label>
+							</div>
 
 							<select
 								name="course"
