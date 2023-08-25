@@ -83,6 +83,7 @@ body {
 		text-decoration: none;
 		font-size: 1.3em;
 		position: relative;
+		font-weight: bold;
 	}
 	.sign-in-up {
 		display: flex;
