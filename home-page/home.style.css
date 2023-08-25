@@ -84,6 +84,7 @@ body {
 		font-size: 1.3em;
 		font-weight: bold;
 		position: relative;
+		font-weight: bold;
 	}
 	.sign-in-up {
 		display: flex;

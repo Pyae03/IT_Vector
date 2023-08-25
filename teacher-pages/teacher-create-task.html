@@ -148,49 +148,39 @@
 						</form>
 					</div>
 
-					<div class="quiz-creation-form hidden">
-						<form action="">
-							<label for="quiz-question">Quiz Question</label>
-							<input
-								type="text"
-								id="quiz-question" />
-
-							<div class="radio-choice-group"></div>
-
-							<div class="option-group">
-								<div
-									class="choice-option custom-file-upload"
-									id="choice-option">
-									<input
-										type="text"
-										placeholder="type another option"
-										class="choice-data" />
-									<button class="btn-add-choice">Add Option</button>
-								</div>
+					<div class="quiz-creation-container">
+						<h1>Add a Quiz</h1>
+						<form id="quiz-creation-form">
+							<div class="form-group">
+								<label for="quiz-title">Quiz Question:</label>
+								<input
+									type="text"
+									id="quiz-title"
+									name="quiz-title"
+									required />
 							</div>
-
-							<select
-								name="course"
-								id="course">
-								<!-- get these data from backend -->
-								<option value="Web Application Development">
-									Web Application Development
-								</option>
-								<option value="Introduction To Computer Science">
-									Introduction To Computer Science
-								</option>
-							</select>
-
-							<select
-								name="course-module"
-								id="">
-								<!-- get these data from backend -->
-								<option value="module-1">Module 1</option>
-								<option value="module-1">Module 2</option>
-							</select>
-							<input
-								type="submit"
-								value="Save" />
+							<div class="form-group">
+								<label for="quiz-category">Quiz Category:</label>
+								<select
+									name="quiz-category"
+									id="quiz-category">
+									<option value="html">Html</option>
+									<option value="css">Css</option>
+									<option value="javascript">JavaScript</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="quiz-questions">Options:</label>
+								<div id="quiz-questions">
+									<!-- Questions and options will be dynamically added here -->
+								</div>
+								<button
+									type="button"
+									id="add-question">
+									Add Options
+								</button>
+							</div>
+							<button type="submit">Add Quiz</button>
 						</form>
 					</div>
 
@@ -240,6 +230,62 @@
 			</div>
 		</div>
 
-		<script src="teacher-create-task.script.js"></script>
+		<!-- <script src="teacher-create-task.script.js"></script> -->
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const quizCreationForm = document.getElementById("quiz-creation-form");
+				const quizQuestions = document.getElementById("quiz-questions");
+				const addQuestionButton = document.getElementById("add-question");
+
+				// Counter to keep track of the number of questions
+				let questionCounter = 0;
+
+				addQuestionButton.addEventListener("click", function () {
+					questionCounter++;
+
+					// Create a new question container
+					const questionContainer = document.createElement("div");
+					questionContainer.classList.add("question-container");
+					questionContainer.innerHTML = `
+            <div class="form-group">
+                <label for="question-${questionCounter}">Option ${questionCounter}:</label>
+                <input type="text" id="question-${questionCounter}" name="question-${questionCounter}" required>
+				<input type="checkbox" id="question-${questionCounter}" name="question-${questionCounter}">Correct Answer
+            </div>
+            
+        `;
+
+					quizQuestions.appendChild(questionContainer);
+				});
+
+				quizCreationForm.addEventListener("submit", function (e) {
+					e.preventDefault();
+
+					// Gather and process quiz data here
+					const quizTitle = document.getElementById("quiz-title").value;
+					const quizcategory = document.getElementById("quiz-category").value;
+
+					// Process questions and options
+					const questions = [];
+					for (let i = 1; i <= questionCounter; i++) {
+						const question = document.getElementById(`question-${i}`).value;
+						const options = document
+							.getElementById(`options-${i}`)
+							.value.split(",")
+							.map((option) => option.trim());
+						questions.push({ question, options });
+					}
+
+					// You can now send this data to a server for storage and further processing.
+					// For simplicity, we'll just display it in an alert for now.
+					alert(
+						`Quiz Title: ${quizTitle}\nQuiz category: ${quizDescription}\nQuestions: ${JSON.stringify(
+							questions
+						)}`
+					);
+				});
+			});
+		</script>
 	</body>
 </html>
