@@ -38,19 +38,18 @@ body {
 	min-height: 100vh;
 }
 
-
-
 @media (min-width: 1440px) {
-    .container {
-        margin: 0em 4em;
-    }
-    nav {
+	.container {
+		margin: 0em 4em;
+	}
+	nav {
 		top: 0;
 		width: 100%;
 		padding: 1em 2em;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		font-weight: bold;
 		/* background-color: var(--white-color); */
 	}
 	nav * {
@@ -109,7 +108,7 @@ body {
 		transition: 0.3s ease;
 	}
 
-    .course-group {
+	.course-group {
 		margin: 1em;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
@@ -158,9 +157,4 @@ body {
 	.teacher p {
 		margin-top: 5em;
 	}
-
-
-
-
-
 }

@@ -1,90 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="user-profile.style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <div class="container">
-        <div class="profile-card3 card">
-            <div class="profile-image">
-                <img src="image/muchiro.jpg" alt="">
-                <button class="btn-edit">Edit</button>
-            </div>
-            <div class="profile-name">
-                <p class="profile-user-name bold-text">Pyae Hein</p>
-                <p><span>@pyaehein</span></p>
-               
-            </div>
-        
-            <div class="follower-detail">
-                
-                <p>Since Since April 30, 2017</p>
-                </ul>
-            </div>
-        </div> 
+	<head>
+		<link
+			rel="stylesheet"
+			href="user-profile.style.css" />
 
-        <div class="bio card">
-            <h3>Bio</h3>
-            <article>
-                    
-                <p>the quick brwon fox jumps over the lazy dogs.
-                    the quick brwon fox jumps over the lazy dogs.
-                    the quick brwon fox jumps over the lazy dogs.
-                </p>
-            </article>
-        </div>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<script
+		type="module"
+		src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script
+		nomodule
+		src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<body>
+		<div class="container">
+			<div class="user-profile card">
+				<div class="bg-component">BG component</div>
+				<div class="profile-img">
+					<img
+						class="profile-pic"
+						src="image/muchiro.jpg"
+						alt="" />
+					<ion-icon
+						class="edit-icon"
+						name="options-outline"></ion-icon>
+				</div>
 
-        <div class="badage card">
-            <h3>Badages</h3>
-            <div class="badage-group">
-                <p>Rising Star</p>
-                <p>Top 1</p>
-                <p>Next Level</p>
-                <p>Professional</p>
-                <p>Professional</p>
-            </div>
-        </div>
-    </div>
-    
+				<div class="profile-info">
+					<h3>Pyae Hein</h3>
+					<p class="flag">🚩 Myeik, Myanmar</p>
+					<p>@pyaehein <span>since 26-8-2023</span></p>
+					<button class="btn-share">
+						<span><ion-icon name="arrow-redo-outline"></ion-icon></span> Share
+						Profile
+					</button>
+				</div>
+			</div>
 
+			<div class="skill card">
+				<h3>Skills</h3>
+				<div class="skill-list">
+					<p>Student</p>
+					<p>FrontEnd</p>
+					<p>Backend</p>
+					<p>Full Stack</p>
+					<p>Designer</p>
+				</div>
+			</div>
+		</div>
+		'
 
-
-    <div class="btn-group">
-        <a href="../student-pages/student-dashboard.html"> < Go  Back</a>
-        <a href="#">Logout</a>
-    </div>
-
-    <div class="profile-edit-form hidden">
-        <form action="">
-            <h1>Profile Edit Form</h1>
-            <label for="username">username</label>
-            <input type="text">
-
-            <label for="bio">Bio</label>
-            <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
-
-            <input type="file">
-            <div class="btn-group">
-                <input type="submit" value="Save">
-                <button class="btn-cancel">Cancel</button>
-            </div>
-        </form>
-    </div>
-</body>
-
-<script>
-    const btn_edit = document.querySelector(".btn-edit")
-    const profile_edit_form = document.querySelector(".profile-edit-form")
-
-    const bg_container = document.querySelector(".container")
-    btn_edit.addEventListener("click", () => {
-        profile_edit_form.classList.toggle("hidden")
-        bg_container.classList.toggle("become-blur")
-    })
-    
-</script>
+		<div class="bio card">
+			<h3>Bio</h3>
+			<p>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam,
+				velit. Ab sunt, ad corporis magnam nesciunt libero, nam doloremque ullam
+				quasi earum sint, nulla tempora nostrum non expedita. Consequuntur,
+				eaque.
+			</p>
+		</div>
+	</body>
 </html>
