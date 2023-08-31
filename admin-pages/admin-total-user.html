@@ -199,4 +199,23 @@
 	<script
 		nomodule
 		src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+	<script>
+		// this is btn crud group
+		const btn_crud = document.createElement("div");
+		btn_crud.className = "btn-crud";
+
+		const btn_edit = document.createElement("a");
+		btn_edit.className = "btn-edit";
+
+		btn_edit.appendChild('<ion-icon name="create-outline"></ion-icon>');
+
+		const btn_delete = document.createElement("a");
+		btn_delete.className = "btn-delete";
+
+		btn_edit.appendChild('<ion-icon name="trash-outline"></ion-icon>');
+
+		btn_crud.appendChild(btn_edit);
+		btn_crud.appendChild(btn_delete);
+	</script>
 </html>

@@ -79,8 +79,11 @@ body {
 		display: flex;
 		flex-direction: column;
 	}
+	.role {
+		font-weight: bold;
+	}
 	.profile-info p span::before {
-		content: "✅";
+		content: "📅";
 	}
 	.btn-share {
 		border: none;
