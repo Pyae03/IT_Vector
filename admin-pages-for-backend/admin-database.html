@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="admin-database.style.css">
+		<link
+			rel="stylesheet"
+			href="admin-nav-bar.style.css" />
+
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<nav>
+			<div class="logo">
+				<img
+					src="image/logo.svg"
+					alt="" />
+				<h2>IT_Vector</h2>
+			</div>
+
+			<div class="view-options">
+				<a
+					href="admin-dashboard.html"
+					class=""
+					>DashBoard</a
+				>
+				<a
+					href="admin-achievement.html"
+					class=""
+					>Achievements</a
+				>
+				<a href="admin-event.html">Event</a>
+				<a
+					href="admin-database.html"
+					class="active"
+					>User Info</a
+				>
+			</div>
+
+			<div class="user-tool">
+				<div class="search-bar">
+					<input
+						type="search"
+						name="search" />
+					<input
+						type="submit"
+						value="search" />
+				</div>
+				<div class="setting">
+					<img
+						src="image/setting.svg"
+						alt="" />
+				</div>
+				<div class="user-profile">
+					<img
+						src="image/user-default.svg"
+						alt="" />
+				</div>
+			</div>
+		</nav>
+
+		<!-- user btn features -->
+		<div class="btn-features">
+			<button class="btn-add-new-user">Add New User</button>
+
+		</div>
+
+		<!-- form  -->
+		<div class="user-creation-form hidden">
+			<form action="">
+				<label for="username">Username</label>
+				<input type="text" id="username" required>
+				
+				<label for="email">Email</label>
+				<input type="email" required>
+
+				<label for="gender" >Gender</label>
+				<select name="gender" id="gender" required>
+					<option value="Male">Male</option>
+					<option value="Female">Female</option>
+				</select>
+
+				<label for="date-of-birth">Date of Birth</label>
+				<input type="date" id="date-of-birth">
+
+				<label for="course">Select Course</label>
+				<select name="course" id="course">
+					<option value="Web Application Development">Web Applicaton Development</option>
+					<option value="Introduction to Computer Science">Introduction to Computer Science</option>
+				</select>
+
+				<div class="btn-confirm">
+					<input type="submit">
+					<input type="reset">
+				</div>
+			</form>
+		</div>
+		<!-- users database view for admin -->
+
+		<div class="container">
+			<div class="title">
+				<div class="view-title">
+					<img
+						src="image/database.svg"
+						alt="" />
+					<h2>User Info</h2>
+				</div>
+
+				<div class="role-title">
+					<a
+						href="#"
+						class="active"
+						>Student</a
+					>
+					<a
+						href="#"
+						class=""
+						>Teacher</a
+					>
+					<a href="#">Admin</a>
+				</div>
+			</div>
+
+			<div class="user-list">
+				<div class="user-info-title">
+					<p>Name</p>
+					<p>Gender</p>
+					<p>Date of Birth</p>
+					<p>ID</p>
+					<p>Email</p>
+				</div>
+
+				<!-- add users information from database in here -->
+				<!-- use loop to iterate each component -->
+				<div class="user-info-detail">
+					<div class="profile">
+						<a href="#">
+							<img
+								src="image/user-default.svg"
+								alt="" />
+							<p class="user-name">Pyae Hein</p>
+						</a>
+					</div>
+					<p>Male</p>
+					<p>15-05-2003</p>
+					<p>KPTMYK-001217</p>
+					<p>pyaehein.sky@gmail.com</p>
+				</div>
+
+				<div class="user-info-detail">m
+					<div class="profile">
+						<a href="#">
+							<img
+								src="image/user-default.svg"
+								alt="" />
+							<p class="user-name">Lwin Oo Maung Maung</p>
+						</a>
+					</div>
+					<p>Male</p>
+					<p>1-01-2003</p>
+					<p>KPTMYK-001209</p>
+					<p>lwinoomaungmaung2003@gmail.com</p>
+				</div>
+
+				<div class="user-info-detail">
+					<div class="profile">
+						<a href="#">
+							<img
+								src="image/user-default.svg"
+								alt="" />
+							<p class="user-name">Yin Myint Myat Thu</p>
+						</a>
+					</div>
+					<p>Female</p>
+					<p>13-07-2003</p>
+					<p>KPTMYK-001165</p>
+					<p>yinmyintmyatthu@gmail.com</p>
+				</div>
+				<div class="user-info-detail">
+					<div class="profile">
+						<a href="#">
+							<img
+								src="image/user-default.svg"
+								alt="" />
+							<p class="user-name">Thazin Moe</p>
+						</a>
+					</div>
+					<p>Female</p>
+					<p>30-07-2002</p>
+					<p>KPTMYK-001162</p>
+					<p>phyunge3082@gmail.com</p>
+				</div>
+				<div class="user-info-detail">
+					<div class="profile">
+						<a href="#">
+							<img
+								src="image/user-default.svg"
+								alt="" />
+							<p class="user-name">Hnin Yu Ya Hlaing</p>
+						</a>
+					</div>
+					<p>Female</p>
+					<p>17-02-2001</p>
+					<p>KPTMYK-001161</p>
+					<p>hninyuya1161@gmail.com</p>
+				</div>
+			</div>
+
+
+			
+		</div>
+	</div>
+		</div>
+
+
+		<script src="admin-database.script.js"></script>
+		<script>
+			const btn_create_user = document.querySelector(".btn-add-new-user")
+			const user_creation_form = document.querySelector(".user-creation-form")
+
+			btn_create_user.addEventListener("click", () => {
+				user_creation_form.classList.toggle("hidden")
+			})
+
+			const user_name = document.querySelectorAll(".user-name")
+			user_name.forEach(un => console.log(un.textContent))
+
+			if()
+		</script>
+	</body>
+</html>
