@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link
+			rel="stylesheet"
+			href="admin-course-module.style.css" />
+
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="container">
+			<nav>
+				<div class="back">
+					<button><a href="">Back</a></button>
+				</div>
+				<div class="btn-function">
+					<button>Add Module</button>
+				</div>
+			</nav>
+
+			<!-- module creation form -->
+			<div class="module-creation-form">
+				<form
+					action=""
+					method="post">
+					<label for="m-title">Module Title</label>
+					<input type="text" />
+					<input
+						type="submit"
+						value="Add New Module" />
+				</form>
+			</div>
+
+			<div class="module-material-creation-form">
+				<form
+					action=""
+					method="post">
+					<label for="material-name">Material Name</label>
+					<input
+						type="text"
+						name="material-name" />
+
+					<label for="material-description">Description</label>
+					<textarea
+						name="material-description"
+						id=""
+						cols="30"
+						rows="10"></textarea>
+
+					<label for="lecture">Lecture Video File</label>
+					<input
+						type="file"
+						name="lecture-file" />
+
+					<input
+						type="submit"
+						value="Add Material" />
+				</form>
+			</div>
+
+			<!-- course module section -->
+			<div class="course-module-group">
+				<div class="course-module">
+					<h2 class="module-title">
+						Introduction to Web Development
+						<span class="add-course-module"
+							><ion-icon name="add-outline"></ion-icon
+						></span>
+
+						<span class="delete-course-module">
+							<ion-icon name="trash-outline"></ion-icon>
+						</span>
+					</h2>
+
+					<div class="module-outline">
+						<div class="material">
+							<a
+								href=""
+								class=""
+								><span><ion-icon name="play-circle-outline"></ion-icon></span
+								>What is web Development?</a
+							>
+							<span class="delete-course-module-material"
+								><ion-icon name="trash-outline"></ion-icon
+							></span>
+						</div>
+						<div class="material">
+							<a
+								href=""
+								class=""
+								><span><ion-icon name="play-circle-outline"></ion-icon></span
+								>What is web Development?</a
+							>
+							<span class="delete-course-module-material"
+								><ion-icon name="trash-outline"></ion-icon
+							></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script
+		type="module"
+		src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script
+		nomodule
+		src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

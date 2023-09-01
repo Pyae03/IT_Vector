@@ -73,9 +73,10 @@ body {
 		flex-direction: column;
 	}
 	.create-tasks {
-		display: flex;
-		gap: 1em;
-		padding: 1em;
+		margin: 0;
+		padding: 0;
+		display: grid;
+		grid-template-columns: 0.25fr 0.15fr;
 		background-color: var(--white-color);
 		border-radius: var(--btn-border-radius);
 		box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
@@ -85,8 +86,9 @@ body {
 		padding: 0.7em;
 		border-radius: var(--btn-border-radius);
 		border: none;
+		display: block;
 	}
-	.create-tasks button:nth-child(1) {
+	/* .create-tasks button:nth-child(1) {
 		background-color: var(--light-blue);
 		color: var(--white-color);
 	}
@@ -97,7 +99,7 @@ body {
 	.create-tasks button:nth-child(3) {
 		background-color: var(--light-blue);
 		color: var(--dark-blue);
-	}
+	} */
 
 	/* current -task */
 	.current-tasks {
