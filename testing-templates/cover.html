@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Overlay Page</title>
+		<style>
+			/* Style for the overlay */
+			.overlay {
+				display: none;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.7);
+				z-index: 999;
+				transition: 0.3s ease;
+			}
+
+			/* Style for the content within the overlay */
+			.overlay-content {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background-color: white;
+				padding: 20px;
+				border-radius: 10px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+				transition: 0.3s ease;
+			}
+
+			/* Style for the close button */
+			.close-button {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="showOverlay">Show Overlay</button>
+		<div
+			class="overlay"
+			id="overlay">
+			<div class="overlay-content">
+				<span
+					class="close-button"
+					id="closeOverlay"
+					>×</span
+				>
+				<!-- Your content for the overlay goes here -->
+				<h2>This is the overlay content</h2>
+				<p>You can put any content you want in here.</p>
+			</div>
+		</div>
+		<script>
+			// JavaScript to show/hide the overlay
+			const showOverlayButton = document.getElementById("showOverlay");
+			const overlay = document.getElementById("overlay");
+			const closeOverlayButton = document.getElementById("closeOverlay");
+
+			showOverlayButton.addEventListener("click", () => {
+				overlay.style.display = "block";
+			});
+
+			closeOverlayButton.addEventListener("click", () => {
+				overlay.style.display = "none";
+			});
+		</script>
+	</body>
+</html>

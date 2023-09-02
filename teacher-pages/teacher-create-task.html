@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 		<link
 			rel="stylesheet"
 			href="teacher-create-task.style.css" />
@@ -101,191 +107,100 @@
 						<!-- <button class="btn-create-homework">Create Homework</button> -->
 					</div>
 
-					<div class="assignment-creation-form hidden">
+					<div class="assignment-wrapper">
+						<nav>
+							<span class="close-button"
+								><ion-icon name="close-outline"></ion-icon
+							></span>
+							<h2>Assignment</h2>
+						</nav>
+
 						<form action="">
-							<label for="assignment">Assignment</label>
-							<input
-								type="text"
-								id="assignment"
-								name="assignment" />
-
-							<label for="assignment-description">Description</label>
-							<textarea
-								name="assignment-description"
-								id="assignment-description"
-								cols="30"
-								rows="10"></textarea>
-
-							<label for="choose-course">Choose Course</label>
-							<select
-								name="choose-course"
-								id="choose-course">
-								<option value="Web Application Development">
-									Web Application Development
-								</option>
-								<option value="Introduction to Computer Science">
-									Introduction to Computer Science
-								</option>
-							</select>
-
-							<label for="attachment">
-								Attachment
-								<input
-									class="custom-file-upload"
-									type="file"
-									name=""
-									id="attachment"
-									data-multiple-caption="{count} files selected"
-									multiple />
-							</label>
-
-							<label for="deadline"> Deadline </label>
-							<input type="date" />
-
-							<input
-								type="submit"
-								value="Save" />
-						</form>
-					</div>
-
-					<div class="quiz-creation-container hidden">
-						<h1>Add a Quiz</h1>
-						<form id="quiz-creation-form">
-							<div class="form-group">
-								<label for="quiz-title">Quiz Question:</label>
+							<div class="assignment-title">
+								<label for="title">Title</label>
 								<input
 									type="text"
-									id="quiz-title"
-									name="quiz-title"
-									required />
+									name="title" />
 							</div>
-							<div class="form-group">
-								<label for="quiz-category">Quiz Category:</label>
-								<select
-									name="quiz-category"
-									id="quiz-category">
-									<option value="html">Html</option>
-									<option value="css">Css</option>
-									<option value="javascript">JavaScript</option>
-								</select>
+
+							<div class="description">
+								<label for="instructions">Instructions (optional) </label>
+								<textarea
+									name="description"
+									id=""
+									cols="30"
+									rows="10"></textarea>
 							</div>
-							<div class="form-group">
-								<label for="quiz-questions">Options:</label>
-								<div id="quiz-questions">
-									<!-- Questions and options will be dynamically added here -->
-								</div>
-								<button
-									type="button"
-									id="add-question">
-									Add Options
-								</button>
+
+							<div class="file-upload">
+								<label for="attach">Attach</label>
+								<input type="file" />
 							</div>
-							<button type="submit">Add Quiz</button>
+
+							<div class="assignment-side-bar">
+								<h3>Course Title: <span>Web Application Development</span></h3>
+								<label for="end-date">End Date</label>
+								<input
+									type="date"
+									name="end-date" />
+
+								<input
+									type="submit"
+									value="Submit" />
+							</div>
 						</form>
 					</div>
+					<div class="quiz-wrapper">
+						<nav>
+							<span class="close-button-quiz"
+								><ion-icon name="close-outline"></ion-icon
+							></span>
+							<h2>Quiz</h2>
+						</nav>
 
-					<!-- <div class="homework-creation-form hidden">
-						<form action="">
-							<label for="homework-title"> Homework Title </label>
-							<input
-								type="text"
-								id="homework-title"
-								name="homework-title" />
-
-							<label for="homework-attachment">
-								Attachment
+						<form id="quizForm">
+							<div class="quiz-question">
+								<label for="title">Quiz Question</label>
 								<input
-									class="custom-file-upload"
-									type="file"
-									id="homework-attachment"
-									name="homework-attachment" />
-							</label>
+									type="text"
+									name="title"
+									required />
+							</div>
+
+							<div class="quiz-options">
+								<div class="quiz-option-group">
+									<!-- <input
+										type="radio"
+										name="quiz-question"
+										required />
+									<input
+										type="text"
+										name="option"
+										required />
+									<select
+										name="correct-answer"
+										required>
+										<option value="false">Incorrect</option>
+										<option value="true">Correct</option>
+									</select>
+									<button class="btn-delete-option">Delete</button> -->
+								</div>
+							</div>
+
+							<div class="add-option">
+								<button class="btn-add-option">Add Option</button>
+							</div>
+
 							<input
 								type="submit"
-								value="Save" />
+								value="Create Quiz" />
 						</form>
-					</div> -->
-
-					<div class="current-tasks">
-						<h2>Current Tasks</h2>
-						<div class="current-tasks-group">
-							<div class="task">
-								<h3>Assignment 1</h3>
-								<p>Introduction to Computer Science</p>
-								<p><span>created: 20-8-2023</span></p>
-							</div>
-							<div class="task">
-								<h3>Assignment 1</h3>
-								<p>Web Application Development</p>
-								<p><span>created: 20-8-2023</span></p>
-							</div>
-							<div class="task">
-								<h3>Assignment 1</h3>
-								<p>Web Application Development</p>
-								<p><span>created: 20-8-2023</span></p>
-							</div>
-						</div>
 					</div>
 				</main>
 			</div>
 		</div>
 
 		<!-- <script src="teacher-create-task.script.js"></script> -->
-
-		<script>
-			document.addEventListener("DOMContentLoaded", function () {
-				const quizCreationForm = document.getElementById("quiz-creation-form");
-				const quizQuestions = document.getElementById("quiz-questions");
-				const addQuestionButton = document.getElementById("add-question");
-
-				// Counter to keep track of the number of questions
-				let questionCounter = 0;
-
-				addQuestionButton.addEventListener("click", function () {
-					questionCounter++;
-
-					// Create a new question container
-					const questionContainer = document.createElement("div");
-					questionContainer.classList.add("question-container");
-					questionContainer.innerHTML = `
-            <div class="form-group">
-                <label for="question-${questionCounter}">Option ${questionCounter}:</label>
-                <input type="text" id="question-${questionCounter}" name="question-${questionCounter}" required>
-				<input type="checkbox" id="question-${questionCounter}" name="question-${questionCounter}">Correct Answer
-            </div>
-            
-        `;
-
-					quizQuestions.appendChild(questionContainer);
-				});
-
-				quizCreationForm.addEventListener("submit", function (e) {
-					e.preventDefault();
-
-					// Gather and process quiz data here
-					const quizTitle = document.getElementById("quiz-title").value;
-					const quizcategory = document.getElementById("quiz-category").value;
-
-					// Process questions and options
-					const questions = [];
-					for (let i = 1; i <= questionCounter; i++) {
-						const question = document.getElementById(`question-${i}`).value;
-						const options = document
-							.getElementById(`options-${i}`)
-							.value.split(",")
-							.map((option) => option.trim());
-						questions.push({ question, options });
-					}
-
-					// You can now send this data to a server for storage and further processing.
-					// For simplicity, we'll just display it in an alert for now.
-					alert(
-						`Quiz Title: ${quizTitle}\nQuiz category: ${quizDescription}\nQuestions: ${JSON.stringify(
-							questions
-						)}`
-					);
-				});
-			});
-		</script>
+		<script src="teacher-create-task.script.js"></script>
 	</body>
 </html>

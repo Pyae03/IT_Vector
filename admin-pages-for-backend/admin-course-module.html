@@ -18,12 +18,12 @@
 					<button><a href="">Back</a></button>
 				</div>
 				<div class="btn-function">
-					<button>Add Module</button>
+					<button class="add-course-module">Add Module</button>
 				</div>
 			</nav>
 
 			<!-- module creation form -->
-			<div class="module-creation-form">
+			<div class="module-creation-form hidden">
 				<form
 					action=""
 					method="post">
@@ -35,7 +35,7 @@
 				</form>
 			</div>
 
-			<div class="module-material-creation-form">
+			<div class="module-material-creation-form hidden">
 				<form
 					action=""
 					method="post">
@@ -67,11 +67,11 @@
 				<div class="course-module">
 					<h2 class="module-title">
 						Introduction to Web Development
-						<span class="add-course-module"
+						<span class="add-course-module-material"
 							><ion-icon name="add-outline"></ion-icon
 						></span>
 
-						<span class="delete-course-module">
+						<span class="delete-course-module-material">
 							<ion-icon name="trash-outline"></ion-icon>
 						</span>
 					</h2>
@@ -105,6 +105,7 @@
 		</div>
 	</body>
 
+	<script src="admin-course-module.script.js"></script>
 	<script
 		type="module"
 		src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

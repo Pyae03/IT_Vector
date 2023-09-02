@@ -1,72 +1,109 @@
-// forms
-const assignment_creation_form = document.querySelector(
-	".assignment-creation-form"
-);
-const quiz_creation_form = document.querySelector(".quiz-creation-form");
-const homework_creation_form = document.querySelector(
-	".homework-creation-form"
-);
+// FOR ASSIGNMENT
 
-// btn create
-const btn_create_assignment = document.querySelector(".btn-create-assignment");
-const btn_create_quiz = document.querySelector(".btn-create-quiz");
-const btn_create_homework = document.querySelector(".btn-create-homework");
+const assignmentForm = document.querySelector(".assignment-wrapper");
 
-// quiz form
-const btn_add_choice = document.querySelector(".btn-add-choice");
-const radio_choice_group = document.querySelector(".radio-choice-group");
+// create task
+const btnCreateAssignment = document.querySelector(".btn-create-assignment");
 
-// assignment
-btn_create_assignment.addEventListener("click", () => {
-	assignment_creation_form.classList.toggle("hidden");
-});
-// quiz
-btn_create_quiz.addEventListener("click", () => {
-	quiz_creation_form.classList.toggle("hidden");
-	if (btn_create_quiz.innerText === "Add Quiz") {
-		// change color and text
-		btn_create_quiz.style.backgroundColor = "var(--red)";
-		return (btn_create_quiz.innerText = "Cancel");
-	}
-	btn_create_quiz.innerHTML = "Add Quiz";
-	btn_create_quiz.style.backgroundColor = "var(--light-purple)";
+// form close btn
+const closeBtn = document.querySelector(".close-button");
+
+btnCreateAssignment.addEventListener("click", () => {
+	console.log("create");
+	assignmentForm.style.display = "block";
 });
 
-// get input
-const choice_data = document.querySelector(".choice-data");
-btn_add_choice.addEventListener("click", (event) => {
+closeBtn.addEventListener("click", () => {
+	assignmentForm.style.display = "none";
+});
+
+// FOR QUIZ
+
+const quizCreationForm = document.querySelector(".quiz-wrapper");
+
+// create task
+const btnCreateQuiz = document.querySelector(".btn-create-quiz");
+
+// form close btn
+const closeBtnQuiz = document.querySelector(".close-button-quiz");
+
+btnCreateQuiz.addEventListener("click", () => {
+	console.log("create");
+	quizCreationForm.style.display = "block";
+});
+
+closeBtnQuiz.addEventListener("click", () => {
+	quizCreationForm.style.display = "none";
+});
+
+// FOR QUIZ FUNCTIONALITY
+const quizForm = document.getElementById("quizForm");
+const addOptionButton = document.querySelector(".btn-add-option");
+
+// Function to add a new option group
+function addOptionGroup() {
+	const optionsContainer = document.querySelector(".quiz-options");
+	const optionGroup = document.createElement("div");
+	optionGroup.className = "quiz-option-group";
+
+	const radioButton = document.createElement("input");
+	radioButton.type = "radio";
+	radioButton.name = "quiz-question";
+	radioButton.required = true;
+
+	const optionInput = document.createElement("input");
+	optionInput.type = "text";
+	optionInput.name = "option";
+	optionInput.required = true;
+
+	const correctAnswerSelect = document.createElement("select");
+	correctAnswerSelect.name = "correct-answer";
+	correctAnswerSelect.required = true;
+
+	const correctOption = document.createElement("option");
+	correctOption.value = "true";
+	correctOption.textContent = "Correct";
+
+	const incorrectOption = document.createElement("option");
+	incorrectOption.value = "false";
+	incorrectOption.textContent = "Incorrect";
+
+	correctAnswerSelect.appendChild(incorrectOption);
+	correctAnswerSelect.appendChild(correctOption);
+
+	const deleteButton = document.createElement("button");
+	deleteButton.textContent = "Delete";
+	deleteButton.className = "btn-delete-option";
+	deleteButton.addEventListener("click", deleteOptionGroup);
+
+	optionGroup.appendChild(radioButton);
+	optionGroup.appendChild(optionInput);
+	optionGroup.appendChild(correctAnswerSelect);
+	optionGroup.appendChild(deleteButton);
+
+	optionsContainer.appendChild(optionGroup);
+
+	return optionGroup;
+}
+
+// Function to delete an option group
+function deleteOptionGroup(event) {
 	event.preventDefault();
+	const optionGroup = event.target.parentElement;
+	const optionsContainer = optionGroup.parentElement;
+	optionsContainer.removeChild(optionGroup);
+}
 
-	if (choice_data.value) {
-		const choice_option = document.createElement("input");
-		choice_option.type = "radio";
-		choice_option.value = choice_data.value;
-		choice_option.id = choice_data.value;
-		// change name in here if you do with backend
-		choice_option.name = "quiz1";
+addOptionButton.addEventListener("click", function (event) {
+	event.preventDefault();
+	addOptionGroup();
+});
 
-		const choice_label = document.createElement("label");
-		choice_label.innerText = choice_data.value;
-		choice_label.setAttribute("for", choice_data.value);
-
-		// correct answer
-		const checkbox = document.createElement("input");
-		checkbox.type = "checkbox";
-
-		const choice = document.createElement("div");
-		choice.className = "option";
-		choice.appendChild(choice_option);
-		choice.appendChild(choice_label);
-		choice.appendChild(checkbox);
-		return radio_choice_group.appendChild(choice);
+// Event delegation to handle delete buttons
+document.addEventListener("click", function (event) {
+	if (event.target.classList.contains("btn-delete-option")) {
+		deleteOptionGroup(event);
 	}
 });
 
-// homework
-// btn_create_homework.addEventListener("click", () => {
-// 	homework_creation_form.classList.toggle("hidden");
-// });
-
-//todo: code this
-// if teacher choose course, course-module select data will change according
-// to which module teacher choose
+// Todo: write code for java servlet

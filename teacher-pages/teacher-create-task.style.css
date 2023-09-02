@@ -180,96 +180,110 @@ body {
 	}
 
 	/* all forms */
-	.assignment-creation-form,
-	.quiz-creation-form,
-	.homework-creation-form {
-		position: relative;
-		left: 25%;
-		margin: 1em;
-		background-color: var(--white-color);
-		padding: 1.5em;
-		width: 45em;
+
+	/* Style for the overlay */
+
+	.assignment-wrapper,
+	.quiz-wrapper {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
 		height: 100%;
-		border-radius: var(--btn-border-radius);
-		transition: 0.3 ease;
+		background-color: var(--bg-color);
+		z-index: 1;
+		transition: 0.3s ease;
 	}
 
-	.assignment-creation-form form,
-	.quiz-creation-form form,
-	.homework-creation-form form {
-		display: flex;
-		gap: 1.4em;
-		flex-direction: column;
-		font-size: 1.2em;
-	}
-	.assignment-creation-form form input[type="text"],
-	.quiz-creation-form form input[type="text"],
-	.homework-creation-form form input[type="text"] {
-		height: 2.8em;
-	}
-	.assignment-creation-form form select {
-		font-size: 1em;
-	}
-	.assignment-creation-form form input[type="submit"],
-	.quiz-creation-form form input[type="submit"],
-	.homework-creation-form form input[type="submit"] {
-		border: none;
-		background-color: var(--light-green);
-		font-size: 1em;
-		color: var(--dark-blue);
-		padding: 1em;
-		font-weight: bold;
-		border-radius: var(--btn-border-radius);
-	}
-
-	/* .quiz-creation-form form .input-box label,
-	.quiz-creation-form from .input-box input {
+	/* Style for the content within the overlay */
+	.overlay-content {
 		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: white;
+		padding: 20px;
+		border-radius: 10px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		transition: 0.3s ease;
 	}
-	.input-box input:focus ~ label,
-	.input-box input:valid ~ label {
-		top: -5px;
-		background-color: red;
-	} */
-	.radio-choice-group {
-		display: flex;
-		flex-direction: column;
+
+	/* Style for the close button */
+	.close-button,
+	.close-button-quiz {
+		position: absolute;
+		top: 10px;
+		right: 30px;
+		cursor: pointer;
+		font-size: 2em;
+	}
+
+	.assignment-wrapper nav {
+		padding: 1em;
+		display: block;
+		align-items: center;
+		/* margin-inline: -5em; */
+	}
+
+	.assignment-wrapper form {
+		display: grid;
+		grid-template-columns: 1fr 0.5fr;
+
+		grid-template-areas:
+			"main1 sidebar"
+			"main2 sidebar"
+			"main3 sidebar";
+
+		margin: 2em 8em;
 		gap: 1em;
 	}
-	.option {
-		background-color: var(--white-color);
-		border: 1px solid var(--light-blue);
-		display: flex;
 
-		align-items: center;
-		padding: 0.4em;
-		gap: 0.3em;
+	.assignment-wrapper form input {
+		font-size: 1.2em;
 	}
-	.option > input[type="checkbox"] {
-		margin-right: auto;
-	}
-	.option::before {
-		content: "";
-		background-color: var(--dark-blue);
-		position: absolute;
-		width: 0.4em;
 
+	.assignment-title {
+		grid-area: main1;
+	}
+	.description {
+		grid-area: main2;
+	}
+	.file-upload {
+		grid-area: main3;
+	}
+	.assignment-side-bar {
+		grid-area: sidebar;
 		display: flex;
 		flex-direction: column;
 	}
-
-	.custom-file-upload {
-		border: 1px solid #ccc;
-		display: inline-block;
-		padding: 6px 12px;
-		cursor: pointer;
+	/* submit btn */
+	.assignment-side-bar input:last-child {
+		margin-top: auto;
+		background-color: var(--light-blue);
+		border: none;
+		border-radius: var(--btn-border-radius);
+		padding: 0.5em 0em;
+		color: var(--white-color);
+		font-size: 1.2em;
+	}
+	.assignment-title,
+	.description,
+	.file-upload,
+	.assignment-side-bar {
+		padding: 2em;
+		background-color: var(--white-color);
+		border-radius: var(--btn-border-radius);
 	}
 
-	/* quiz creation form */
-	.btn-add-choice {
-		font-size: 0.8em;
-	}
-	.quiz-creation-form select {
-		font-size: 1em;
+	/* FOR QUIZ */
+	.quiz-wrapper form {
+		display: flex;
+		flex-direction: column;
+
+		background-color: var(--white-color);
+		margin: 2em 8em;
+		padding: 1em;
+		border-radius: var(--btn-border-radius);
 	}
 }

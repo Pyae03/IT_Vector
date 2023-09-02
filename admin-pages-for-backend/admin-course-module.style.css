@@ -148,4 +148,9 @@ body {
 		height: 2.67em;
 		font-size: 1.1em;
 	}
+
+	/* helper css */
+	.hidden {
+		display: none;
+	}
 }
