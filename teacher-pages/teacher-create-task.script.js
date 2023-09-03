@@ -49,7 +49,7 @@ function addOptionGroup() {
 	const radioButton = document.createElement("input");
 	radioButton.type = "radio";
 	radioButton.name = "quiz-question";
-	radioButton.required = true;
+	//radioButton.required = true;
 
 	const optionInput = document.createElement("input");
 	optionInput.type = "text";
@@ -107,3 +107,18 @@ document.addEventListener("click", function (event) {
 });
 
 // Todo: write code for java servlet
+// todo:  also style for quiz creation form
+
+// 	MAIN-QUIZ-WRAPPER
+
+const mainQuizForm = document.querySelector(".main-quiz-wrapper");
+const btnQuiz = document.querySelector(".btn-quiz");
+const closeBtnMainQuiz = document.querySelector(".close-button-main-quiz");
+btnQuiz.addEventListener("click", () => {
+	console.log("create");
+	mainQuizForm.style.display = "block";
+});
+
+closeBtnMainQuiz.addEventListener("click", () => {
+	mainQuizForm.style.display = "none";
+});

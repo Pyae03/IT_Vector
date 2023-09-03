@@ -19,10 +19,18 @@ add_course_module.addEventListener("click", () => {
 	module_creation_form.classList.toggle("hidden");
 });
 
+// ----------------------------------------
+
 const module_material_creation_form = document.querySelector(
 	".module-material-creation-form"
 );
 
 add_course_module_material.addEventListener("click", () => {
+	module_material_creation_form.classList.toggle("hidden");
+});
+// cancel just toggle
+const btnCancle = document.querySelector(".btn-cancel");
+btnCancle.addEventListener("click", (event) => {
+	event.preventDefault();
 	module_material_creation_form.classList.toggle("hidden");
 });

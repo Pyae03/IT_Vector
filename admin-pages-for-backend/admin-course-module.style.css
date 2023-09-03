@@ -124,11 +124,13 @@ body {
 		font-size: 1.1em;
 	}
 	.module-creation-form form input[type="submit"],
-	.module-material-creation-form form input[type="submit"] {
+	.module-material-creation-form form input[type="submit"],
+	.btn-group button {
 		border: none;
 		border-radius: var(--btn-border-radius);
 		background-color: var(--light-blue);
 		color: var(--white-color);
+		width: 100%;
 	}
 
 	/* next one */
@@ -146,6 +148,14 @@ body {
 	}
 	.module-material-creation-form form input {
 		height: 2.67em;
+		font-size: 1.1em;
+	}
+
+	.btn-group {
+		display: flex;
+		gap: 1em;
+	}
+	.btn-group button {
 		font-size: 1.1em;
 	}
 

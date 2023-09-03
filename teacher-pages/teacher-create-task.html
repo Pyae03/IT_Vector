@@ -103,7 +103,8 @@
 				<main>
 					<div class="create-tasks">
 						<button class="btn-create-assignment">Create Assignment</button>
-						<button class="btn-create-quiz">Add Quiz</button>
+						<button class="btn-create-quiz">Add Quiz Question</button>
+						<button class="btn-quiz">Create Quiz</button>
 						<!-- <button class="btn-create-homework">Create Homework</button> -->
 					</div>
 
@@ -191,10 +192,80 @@
 								<button class="btn-add-option">Add Option</button>
 							</div>
 
+							<select
+								name="category"
+								id="">
+								<option value=""></option>
+							</select>
 							<input
 								type="submit"
 								value="Create Quiz" />
 						</form>
+					</div>
+
+					<!-- QUIZ -->
+					<div class="main-quiz-wrapper">
+						<nav>
+							<span class="close-button-main-quiz"
+								><ion-icon name="close-outline"></ion-icon
+							></span>
+							<h2>Quiz</h2>
+						</nav>
+
+						<form action="">
+							<div class="assignment-title">
+								<label for="title">Quiz Name</label>
+								<input
+									type="text"
+									name="quizName" />
+							</div>
+
+							<div class="description">
+								<label for="instructions">Instructions (optional) </label>
+								<textarea
+									name="description"
+									id=""
+									cols="30"
+									rows="10"></textarea>
+							</div>
+
+							<div class="assignment-side-bar">
+								<h3>Course Title: <span>Web Application Development</span></h3>
+								<label for="end-date">Time Limit</label>
+								<input
+									type="number"
+									name="timeLimit" />
+
+								<input
+									type="submit"
+									value="Submit" />
+							</div>
+						</form>
+					</div>
+
+					<div class="todo-list">
+						<div class="todo-assignment-group">
+							<h3>Assignment List</h3>
+							<div class="todo-assignment">
+								<span><ion-icon name="bookmark-outline"></ion-icon></span>
+								<p>assignment title</p>
+							</div>
+							<div class="todo-assignment">
+								<span><ion-icon name="bookmark-outline"></ion-icon></span>
+								<p>assignment title</p>
+							</div>
+						</div>
+						<div class="todo-quiz-group">
+							<h3>Quiz List</h3>
+							<div class="todo-quiz">
+								<span><ion-icon name="help-outline"></ion-icon></span>
+								<p>quiz title</p>
+							</div>
+							<div class="todo-quiz">
+								<span><ion-icon name="help-outline"></ion-icon></span>
+								<p>quiz title</p>
+							</div>
+						</div>
 					</div>
 				</main>
 			</div>
