@@ -5,6 +5,13 @@
 			rel="stylesheet"
 			href="admin-course-module.style.css" />
 
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 		<meta charset="UTF-8" />
 		<meta
 			name="viewport"
@@ -36,7 +43,7 @@
 						value="Add New Module" />
 				</form>
 			</div>
-
+			<!-- MODULE MATERIAL CREATION FORM-->
 			<div class="module-material-creation-form hidden">
 				<form
 					action=""
@@ -67,25 +74,113 @@
 				</form>
 			</div>
 
+			<!-- ASSIGNMENT CREATION FORM-->
+			<div class="assignment-wrapper">
+				<nav>
+					<span class="close-button"
+						><ion-icon name="close-outline"></ion-icon
+					></span>
+					<h2>Assignment</h2>
+				</nav>
+
+				<form action="">
+					<div class="assignment-title">
+						<label for="title">Title</label>
+						<input
+							type="text"
+							name="title" />
+					</div>
+
+					<div class="description">
+						<label for="instructions">Instructions (optional) </label>
+						<textarea
+							name="description"
+							id=""
+							cols="30"
+							rows="10"></textarea>
+					</div>
+
+					<div class="file-upload">
+						<label for="attach">Attach</label>
+						<input type="file" />
+					</div>
+
+					<div class="assignment-side-bar">
+						<h3>Course Title: <span>Web Application Development</span></h3>
+						<label for="end-date">End Date</label>
+						<input
+							type="date"
+							name="end-date" />
+
+						<input
+							type="submit"
+							value="Submit" />
+					</div>
+				</form>
+			</div>
+
+			<!-- QUIZ CREATION FORM -->
+			<div class="main-quiz-wrapper">
+				<nav>
+					<span class="close-button-main-quiz"
+						><ion-icon name="close-outline"></ion-icon
+					></span>
+					<h2>Quiz</h2>
+				</nav>
+
+				<form action="">
+					<div class="assignment-title">
+						<label for="title">Quiz Name</label>
+						<input
+							type="text"
+							name="quizName" />
+					</div>
+
+					<div class="description">
+						<label for="instructions">Instructions (optional) </label>
+						<textarea
+							name="description"
+							id=""
+							cols="30"
+							rows="10"></textarea>
+					</div>
+
+					<div class="assignment-side-bar">
+						<h3>Course Title: <span>Web Application Development</span></h3>
+						<label for="end-date">Time Limit</label>
+						<input
+							type="number"
+							name="timeLimit" />
+
+						<input
+							type="submit"
+							value="Submit" />
+					</div>
+				</form>
+			</div>
+
 			<!-- course module section -->
 			<div class="course-module-group">
 				<!-- query from servlet courseModule and courseModuleMaterial-->
-
 
 				<!-- query courseModule here -->
 				<div class="course-module">
 					<h2 class="module-title">
 						Introduction to Web Development
 						<span class="add-course-module-material"
-							><ion-icon name="add-outline"></ion-icon
-						>
-								<div class="add-task hidden">
-									<p class="add-material">Material</p>
-									<p class="add-assignment">Assignment</p>
-									<p class="add-quiz">Quiz</p>
-
-								</div>
-					</span>
+							><ion-icon name="add-outline"></ion-icon>
+							<div class="add-task hidden">
+								<p class="add-material">
+									<ion-icon name="bookmark-outline"></ion-icon>Material
+								</p>
+								<p class="add-assignment">
+									<ion-icon name="document-outline"></ion-icon>Assignment
+								</p>
+								<p class="add-quiz">
+									<ion-icon name="help-outline"></ion-icon>Quiz
+								</p>
+							</div>
+						</span>
 
 						<span class="delete-course-module-material">
 							<ion-icon name="trash-outline"></ion-icon>
