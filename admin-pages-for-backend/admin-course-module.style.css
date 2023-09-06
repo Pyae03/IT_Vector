@@ -159,8 +159,32 @@ body {
 		font-size: 1.1em;
 	}
 
+	
+
+	.add-course-module-material {
+
+	}
+	.add-task {
+		border: 1px solid red;
+		display: flex;
+		flex-direction: column;
+		gap: .3em;
+		padding: .5em;
+		position: absolute;
+		z-index: 1;
+		left: -2em;
+		border-radius: .2em;
+		background-color: var(--white-color);
+		transition: .3s ease;
+	}
+	.add-task p {
+		font-size: .8em;
+	}
+
+
 	/* helper css */
 	.hidden {
 		display: none;
+		transition: .3s ease;
 	}
 }

@@ -25,12 +25,20 @@ const module_material_creation_form = document.querySelector(
 	".module-material-creation-form"
 );
 
-add_course_module_material.addEventListener("click", () => {
-	module_material_creation_form.classList.toggle("hidden");
-});
 // cancel just toggle
 const btnCancle = document.querySelector(".btn-cancel");
 btnCancle.addEventListener("click", (event) => {
 	event.preventDefault();
 	module_material_creation_form.classList.toggle("hidden");
 });
+
+
+// in uni
+const add_task = document.querySelector(".add-task")
+const addMaterial = document.querySelector(".add-material")
+
+
+add_course_module_material.addEventListener("click", () => {
+	add_task.classList.toggle("hidden")
+});
+addMaterial.addEventListener("click", () => module_material_creation_form.classList.toggle("hidden"))
