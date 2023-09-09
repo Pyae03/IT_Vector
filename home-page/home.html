@@ -47,7 +47,7 @@
 					get the education they need to succeed.
 				</p>
 				<a
-					href="#"
+					href="register.jsp"
 					style="
 						color: #283747;
 						border-radius: 0.4em;
@@ -168,21 +168,19 @@
 					<h2>Student DashBoard</h2>
 
 					<p>
-						Allow students to unregister - Let users unsubscribe from the
-						registered courses. The user will see a button Remove for each
-						course in hid student dashboard. Student Dashboard tabs - Here you
-						can set up the tabs which will displayed in the student dashboard.
+						The student dashboard view is a separate site for students to access
+						Defined Learning projects. Each student has a unique login.
+						Depending on your district preferences the login may be through a
+						separate portal or at the main Defined Learning student site
 					</p>
 				</div>
 				<div class="card-left-2">
 					<h2>Course Video Player</h2>
 
 					<p>
-						The number one thing to do to create a high-quality training video
-						is to make sure the content is relevant and relatable. Of
-						course,things like visual effects,music, and other enhancements
-						help, but if the video isn't interesting and informative, your video
-						will fail.
+						The Course Player is the course-taking environment - the part of
+						your site where your students can go to watch your videos, take your
+						quizzes, and more
 					</p>
 				</div>
 				<div class="main">
@@ -195,7 +193,7 @@
 					</p>
 				</div>
 				<div class="card-right-1">
-					<h2>Quiz, Assignemt, Homework</h2>
+					<h2>Quiz, Assignemt</h2>
 
 					<p>
 						Cognitively the act of taking a quiz, calling up knowledge from
@@ -208,8 +206,8 @@
 					<h2>Multiple Courses</h2>
 
 					<p>
-						A set of classes or a plan of study on a particular subject, usually
-						leading to an exam or qualification
+						Student can enrollment the subject what they want to study which can
+						lead to students without the need of subject that they already known
 					</p>
 				</div>
 			</section>
@@ -229,25 +227,8 @@
 					<h1>Language</h1>
 					<div class="language-group">
 						<p>English</p>
-						<!--<p>Deutsch</p>
-						<p>Espanol</p>
-						<p>Francais</p>
-						<p>Portugues</p>
-						<p>Indonesian</p>
-						<p>Italian</p>
-						<p>Nederlands</p>
-						<p>Polnisch</p> -->
 					</div>
 				</div>
-
-				<!-- <div class="third-section">
-					<h1>Get in touch</h1>
-					<div class="social-media">
-						<a href=""><img src="images/home/facebook.png" alt=""></a>
-						<a href=""><img src="images/home/twitter.png" alt=""></a>
-						<a href=""><img src="images/home/github.png" alt=""></a>
-					</div>
-				</div> -->
 
 				<div class="privacy-policy">
 					<p>Terms of purchase</p>
@@ -259,7 +240,7 @@
 		</div>
 
 		<script>
-			// Particle.js configuration
+			// my Particle.js configuration
 
 			fetch("particlesjs-config.json")
 				.then((response) => response.json())
@@ -269,6 +250,7 @@
 				.catch((error) =>
 					console.error("Error loading Particle.js config:", error)
 				);
+			window.onload();
 		</script>
 	</body>
 </html>
